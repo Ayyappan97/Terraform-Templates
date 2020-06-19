@@ -51,3 +51,13 @@ resource "aws_instance" "web1" {
     Name = "Hello from terraform"
   }
 }
+
+resource "aws_s3_bucket" "b" {
+  bucket = "ayyappanhsr"
+  acl    = "private"
+
+  tags = {
+    Name        = "My bucket"
+
+  }
+}
